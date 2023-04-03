@@ -1,9 +1,146 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <meta charset="utf-9" />
+    <meta
+      name="description"
+      content="You can calculate the area of a square base pyramid using this website"
+    />
+    <meta name="keywords" content="mths, ics2o" />
+    <meta name="author" content="Mohamad" />
+    <meta name="viewport" conent="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.lime-green.min.css"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Area of pyramid</title>
   </head>
   <body>
-    <p>Paragraph</p>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title"
+            >Area of a Square Base Pyramid, with JS</span
+          >
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href=""></a>
+            <a class="mdl-navigation__link" href=""></a>
+            <a class="mdl-navigation__link" href=""></a>
+            <a class="mdl-navigation__link" href=""></a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Navigate</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href=""></a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <!--Donut picture-->
+          <img
+            src="./images/Screen Shot 2023-04-03 at 12.50.16 PM.png"
+            alt="Donut"
+            class="donut"
+          />
+          <!--Text below header-->
+          <div class="page-content-formula">
+            Formula
+            <br />
+            <br />
+            A = [(a*b)h]/3
+          </div>
+          <br />
+          <br />
+          <div class="page-content-top">
+            Enter values to calculate area of a trapezoid
+          </div>
+          <br />
+          <!-- Numeric Textfield with Floating Label -->
+          <form action="#">
+            A length
+            <div
+              class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+            >
+              <input
+                class="mdl-textfield__input"
+                type="text"
+                pattern="-?[0-9]*(\.[0-9]+)?"
+                id="a-length"
+              />
+              <label class="mdl-textfield__label" for="a-length"
+                >A length...</label
+              >
+              <span class="mdl-textfield__error">Input is not a number!</span>
+            </div>
+            mm
+          </form>
+          <!-- Numeric Textfield with Floating Label -->
+          <form action="#">
+            B length
+            <div
+              class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+            >
+              <input
+                class="mdl-textfield__input"
+                type="text"
+                pattern="-?[0-9]*(\.[0-9]+)?"
+                id="b-length"
+              />
+              <label class="mdl-textfield__label" for="b-length"
+                >B length...</label
+              >
+              <span class="mdl-textfield__error">Input is not a number!</span>
+            </div>
+            mm
+          </form>
+          <!-- Numeric Textfield with Floating Label -->
+          <form action="#">
+            Height
+            <div
+              class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+            >
+              <input
+                class="mdl-textfield__input"
+                type="text"
+                pattern="-?[0-9]*(\.[0-9]+)?"
+                id="height"
+              />
+              <label class="mdl-textfield__label" for="height">Height...</label>
+              <span class="mdl-textfield__error">Input is not a number!</span>
+            </div>
+            mm
+          </form>
+          <!-- Accent-colored raised button with ripple -->
+          <button
+            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            onclick="calculate()"
+          >
+            Calculate
+          </button>
+          <br />
+          <br />
+          <!--Answer output from button-->
+          <div id="answer">The volume is: ...</div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
